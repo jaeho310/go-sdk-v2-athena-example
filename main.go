@@ -3,5 +3,5 @@ package main
 import "athena-example/service"
 
 func main() {
-	service.ExecuteQuery("SELECT * FROM log_center.es_fail limit 5")
+	service.ExecuteQuery("SELECT * FROM your_database_name.your_table_name limit 5")
 }

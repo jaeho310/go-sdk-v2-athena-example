@@ -16,13 +16,12 @@ var (
 )
 
 func init() {
-	// todo lambda env 설정
-	cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithSharedConfigProfile("zigzag-main"))
+	cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithSharedConfigProfile("your-profile"))
 	if err != nil {
 		fmt.Println(err)
 	}
 	athenaClient = athena.NewFromConfig(cfg)
-	output = "s3://log-center-athena-query-result"
+	output = "s3://your-output-bucket-path"
 }
 
 func StartQuery(query string) (*string, error) {
